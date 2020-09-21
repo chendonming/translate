@@ -24,7 +24,16 @@
         "command": "translate.zntoen",
         "title": "translate: 中文翻译成英文"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "translate.zntoen",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
