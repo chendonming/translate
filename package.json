@@ -22,7 +22,7 @@
     "commands": [
       {
         "command": "translate.zntoen",
-        "title": "中文翻译成英文"
+        "title": "translate: 中文翻译成英文"
       }
     ]
   },
