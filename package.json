@@ -10,6 +10,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chendonming/translate"
+  },
   "activationEvents": [
     "onCommand:translate.zntoen"
   ],
