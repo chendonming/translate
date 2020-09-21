@@ -10,7 +10,7 @@ function activate(context) {
      */
     let selectWord
     const currentEditor = vscode.window.activeTextEditor
-    const currentSelect = currentEditor.document.getText(currentEditor.visibleRanges[0])
+    const currentSelect = currentEditor.document.getText(currentEditor.selection)
     const data = await api.translate(currentSelect, 'zh', 'en')
     const result = data.data.trans_result[0].dst
     // 基于空格分割
@@ -35,9 +35,11 @@ function activate(context) {
       selectWord = list
     }
 
-    currentEditor.edit(editBuilder => {
-      editBuilder.replace(currentEditor.visibleRanges[0], selectWord)
-    })
+    if (selectWord) {
+      currentEditor.edit(editBuilder => {
+        editBuilder.replace(currentEditor.selection, selectWord)
+      })
+    }
   })
 
   context.subscriptions.push(disposable)
