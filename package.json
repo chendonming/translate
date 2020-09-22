@@ -1,8 +1,8 @@
 {
   "name": "translate",
-  "displayName": "translate",
-  "description": "",
-  "version": "0.0.3",
+  "displayName": "translateNamed",
+  "description": "没有英文词汇?一款能让你快速生成变量名的插件",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.49.0"
   },
@@ -14,6 +14,7 @@
     "type": "git",
     "url": "https://github.com/chendonming/translate"
   },
+  "icon": "images/icon.png",
   "activationEvents": [
     "onCommand:translate.zntoen"
   ],
@@ -33,7 +34,24 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "configuration": [
+      {
+        "title": "translateNamed",
+        "properties": {
+          "translate.appid": {
+            "type": "string",
+            "default": "20200921000570318",
+            "description": "百度翻译API-appid"
+          },
+          "translate.secret": {
+            "type": "string",
+            "default": "8iaGzb7v0225xQ8SVxqq",
+            "description": "百度翻译API-密钥"
+          }
+        }
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

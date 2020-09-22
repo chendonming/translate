@@ -1,7 +1,8 @@
 const axios = require('axios')
+const vscode = require('vscode')
 const md5 = require('md5')
-const appid = '20200921000570318'
-const secret = '8iaGzb7v0225xQ8SVxqq'
+const appid = vscode.workspace.getConfiguration().get('translate.appid')
+const secret = vscode.workspace.getConfiguration().get('translate.secret')
 
 module.exports = {
   /**
