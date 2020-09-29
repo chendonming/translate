@@ -35,7 +35,7 @@ function activate(context) {
       }).join(''))
       selectWord = await vscode.window.showQuickPick(arr, { placeHolder: '请选择要替换的变量名' })
     } else {
-      selectWord = list
+      selectWord = list[0]
     }
 
     if (selectWord) {

@@ -13,3 +13,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - 0.0.7
   修复了当前编辑器为空时的 bug
+
+- 0.0.8
+  修复单词
