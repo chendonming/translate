@@ -1,21 +1,24 @@
 const vscode = require('vscode')
 const api = require('./translate-api')
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-  let disposable = vscode.commands.registerCommand('translate.zntoen', async function () {
+  const disposable = vscode.commands.registerCommand('translate.zntoen', async function () {
     /**
      * @type {string} 选择的单词
      */
     let selectWord
     const currentEditor = vscode.window.activeTextEditor
+    if (!currentEditor) return
     const currentSelect = currentEditor.document.getText(currentEditor.selection)
+    if (!currentSelect) return
     const data = await api.translate(currentSelect, 'zh', 'en')
     const result = data.data.trans_result[0].dst
     // 基于空格分割
     const list = result.split(' ')
-    if (list.length > 0) {
+    if (list.length > 1) {
       const arr = []
       // - 号连接
       arr.push(list.map(v => v.toLocaleLowerCase()).join('-'))

@@ -10,7 +10,14 @@ module.exports = {
    * @param {string} q 查询字符串
    * @param {string} from 源语言
    * @param {string} to 目标语言
-   * @returns {{data: {trans_result:[{src: string, dst: string}]}}} Promise翻译结果
+  * @returns {
+    Promise<{
+    data: {
+    trans_result: [{
+      src: string, dst: string
+    }]
+  }
+}>} Promise翻译结果
    */
   translate(q, from, to) {
     var salt = Math.random()
