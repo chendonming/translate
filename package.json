@@ -2,7 +2,7 @@
   "name": "translate",
   "displayName": "translateNamed",
   "description": "没有英文词汇?一款能让你快速生成变量名的插件",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.49.0"
   },
