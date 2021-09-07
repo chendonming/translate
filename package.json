@@ -2,7 +2,7 @@
   "name": "translate",
   "displayName": "translateNamed",
   "description": "没有英文词汇?一款能让你快速生成变量名的插件",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.49.0"
   },
@@ -41,12 +41,10 @@
         "properties": {
           "translate.appid": {
             "type": "string",
-            "default": "20200921000570318",
             "description": "百度翻译API-appid"
           },
           "translate.secret": {
             "type": "string",
-            "default": "8iaGzb7v0225xQ8SVxqq",
             "description": "百度翻译API-密钥"
           }
         }

@@ -16,3 +16,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - 0.0.8
   修复单词
+
+- 0.0.9
+  将小驼峰设置为第一列, 将默认的appid和密钥置空, 增加了一些错误提示。
+  自己去百度翻译开发者中心申请免费的翻译服务即可获取appid和密钥。
